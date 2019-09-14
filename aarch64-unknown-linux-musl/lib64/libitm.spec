@@ -1,1 +1,0 @@
-../../aarch64-unknown-linux-musl/sysroot/lib64/libitm.spec

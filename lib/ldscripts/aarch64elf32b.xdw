@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-bigaarch64", "elf32-bigaarch64",
 	      "elf32-littleaarch64")
 OUTPUT_ARCH(aarch64:ilp32)
 ENTRY(_start)
-SEARCH_DIR("=/home/x0r3d/x-tools/aarch64-unknown-linux-musl/aarch64-unknown-linux-musl/lib");
+SEARCH_DIR("=/home/x0r3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/lib");
 SECTIONS
 {
   /* Read-only sections, merged into text segment: */
