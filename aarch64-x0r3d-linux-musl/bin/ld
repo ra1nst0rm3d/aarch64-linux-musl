@@ -1,6 +1,6 @@
 #!/bin/sh
 
-call_to=gold
+call_to=bfd
 
 case "${CTNG_LD_IS}" in
     bfd)    call_to=bfd;;
