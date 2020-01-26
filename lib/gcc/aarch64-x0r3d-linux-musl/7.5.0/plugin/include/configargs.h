@@ -1,0 +1,7 @@
+/* Generated automatically. */
+static const char configuration_arguments[] = "/home/ra1nst0rm3d/test/.build/aarch64-x0r3d-linux-musl/src/gcc/configure --build=x86_64-build_pc-linux-gnu --host=x86_64-build_pc-linux-gnu --target=aarch64-x0r3d-linux-musl --prefix=/home/ra1nst0rm3d/x-tools/aarch64-x0r3d-linux-musl --with-sysroot=/home/ra1nst0rm3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/sysroot --enable-languages=c --with-arch=armv8-a+crc+simd+crypto --with-pkgversion='crosstool-NG 1.24.0.60-a152d61' --enable-__cxa_atexit --disable-libmudflap --disable-libgomp --disable-libssp --disable-libquadmath --disable-libquadmath-support --disable-libsanitizer --disable-libmpx --with-gmp=/home/ra1nst0rm3d/test/.build/aarch64-x0r3d-linux-musl/buildtools --with-mpfr=/home/ra1nst0rm3d/test/.build/aarch64-x0r3d-linux-musl/buildtools --with-mpc=/home/ra1nst0rm3d/test/.build/aarch64-x0r3d-linux-musl/buildtools --with-isl=/home/ra1nst0rm3d/test/.build/aarch64-x0r3d-linux-musl/buildtools --enable-lto --with-host-libstdcxx='-static-libgcc -Wl,-Bstatic,-lstdc++,-Bdynamic -lm' --enable-threads=posix --enable-target-optspace --enable-plugin --disable-nls --disable-multilib --with-local-prefix=/home/ra1nst0rm3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/sysroot --enable-long-long";
+static const char thread_model[] = "posix";
+
+static const struct {
+  const char *name, *value;
+} configure_default_options[] = { { "arch", "armv8-a+crc+simd+crypto" } };

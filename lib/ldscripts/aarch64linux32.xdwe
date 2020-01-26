@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-littleaarch64", "elf32-bigaarch64",
 	      "elf32-littleaarch64")
 OUTPUT_ARCH(aarch64:ilp32)
 ENTRY(_start)
-SEARCH_DIR("=/home/x0r3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/libilp32"); SEARCH_DIR("=/usr/local/libilp32"); SEARCH_DIR("=/libilp32"); SEARCH_DIR("=/usr/libilp32"); SEARCH_DIR("=/home/x0r3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
+SEARCH_DIR("=/home/ra1nst0rm3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/libilp32"); SEARCH_DIR("=/usr/local/libilp32"); SEARCH_DIR("=/libilp32"); SEARCH_DIR("=/usr/libilp32"); SEARCH_DIR("=/home/ra1nst0rm3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/lib"); SEARCH_DIR("=/usr/local/lib"); SEARCH_DIR("=/lib"); SEARCH_DIR("=/usr/lib");
 SECTIONS
 {
   PROVIDE (__executable_start = SEGMENT_START("text-segment", 0)); . = SEGMENT_START("text-segment", 0) + SIZEOF_HEADERS;
@@ -38,9 +38,7 @@ SECTIONS
   .rela.plt       :
     {
       *(.rela.plt)
-      PROVIDE_HIDDEN (__rela_iplt_start = .);
       *(.rela.iplt)
-      PROVIDE_HIDDEN (__rela_iplt_end = .);
     }
   . = ALIGN(CONSTANT (MAXPAGESIZE));
   .init           :
