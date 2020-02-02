@@ -5,10 +5,7 @@ struct ipc_perm {
 	uid_t cuid;
 	gid_t cgid;
 	mode_t mode;
-	unsigned short __ipc_perm_seq;
-
-	unsigned long __pad1;
-	unsigned long __pad2;
+	int __ipc_perm_seq;
+	long __pad1;
+	long __pad2;
 };
-
-#define IPC_64 0

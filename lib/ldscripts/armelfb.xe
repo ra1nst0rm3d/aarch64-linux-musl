@@ -7,7 +7,7 @@ OUTPUT_FORMAT("elf32-bigarm", "elf32-bigarm",
 	      "elf32-littlearm")
 OUTPUT_ARCH(arm)
 ENTRY(_start)
-SEARCH_DIR("=/home/x0r3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/lib");
+SEARCH_DIR("=/home/ra1nst0rm3d/x-tools/aarch64-x0r3d-linux-musl/aarch64-x0r3d-linux-musl/lib");
 SECTIONS
 {
   PROVIDE (__executable_start = SEGMENT_START("text-segment", 0x8000)); . = SEGMENT_START("text-segment", 0x8000);
@@ -248,6 +248,16 @@ SECTIONS
   .debug_macro    0 : { *(.debug_macro) }
   .debug_addr     0 : { *(.debug_addr) }
   .ARM.attributes 0 : { KEEP (*(.ARM.attributes)) KEEP (*(.gnu.attributes)) }
-  .note.gnu.arm.ident 0 : { KEEP (*(.note.gnu.arm.ident)) }
+.note.gnu.arm.ident 0 : { KEEP (*(.note.gnu.arm.ident)) }
+/* This section contains data that is not initialised during load
+   *or* application reset.  */
+ .noinit (NOLOAD) :
+ {
+   . = ALIGN(2);
+   PROVIDE (__noinit_start = .);
+   *(.noinit)
+   . = ALIGN(2);
+   PROVIDE (__noinit_end = .);
+ }
   /DISCARD/ : { *(.note.GNU-stack) *(.gnu_debuglink) *(.gnu.lto_*) }
 }
